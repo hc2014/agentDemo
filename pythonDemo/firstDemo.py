@@ -46,7 +46,7 @@ def get_current_weather(location: str) -> str:
 
 API_KEY=os.getenv("QWEN_PLUS")
 
-print("API Key 读取结果:", API_KEY) 
+#print("API Key 读取结果:", API_KEY) 
 
 # 2. 初始化模型
 model = ChatOpenAI(
@@ -68,7 +68,7 @@ if __name__ == "__main__":
     # 新版调用方式
     response = agent.invoke({
         "messages": [
-            {"role": "user", "content": "今天黄石天气如何？"}
+            {"role": "user", "content": "今天黄冈天气如何？"}
         ]
     })
     # 提取最后的 AI 回复内容
