@@ -26,7 +26,6 @@ class ResponseModel(BaseModel):
     data: dict = None
 
 # ==================== 业务接口实现 ====================
-
 @app.get("/api/v1/weather", response_model=ResponseModel, summary="查询实时天气")
 def get_weather(location: str = Query(..., description="城市名称，如：北京")):
     """
